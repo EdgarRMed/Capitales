@@ -17,7 +17,14 @@
             <ToolBar prefHeight="76.0" prefWidth="750.0" BorderPane.alignment="CENTER">
               <items>
                 <Button mnemonicParsing="false" onAction="#backToMainScene" prefHeight="42.0" prefWidth="120.0" text="Regresar" />
+                  <Label prefHeight="21.0" prefWidth="279.0" />
+                  <Button layoutX="10.0" layoutY="21.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="120.0" text="Anterior" />
+                  <Label prefHeight="21.0" prefWidth="14.0" />
+                  <Button layoutX="417.0" layoutY="27.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="120.0" text="Siguiente" />
               </items>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
             </ToolBar>
          </bottom>
          <top>
