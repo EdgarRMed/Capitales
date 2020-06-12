@@ -30,12 +30,12 @@ public class Model {
         int valueCounter = 0;
         int rand;
         int cont = file.cont;
-        String [] capitalsForButtons = new String[4];
-        int [] capitals = {0,0,0,0}; // Array para comprobar que no se repitan capitales
-        for (int i = 0; i < 4; i++) {
+        String [] capitalsForButtons = new String[5];
+        int [] capitals = {0,0,0,0,0}; // Array para comprobar que no se repitan capitales
+        for (int i = 0; i < 5; i++) {
             rand = continent.random(cont);
             Node temp = continent.recorrido(rand);
-            if (rand > 1 && rand != capitals[0] && rand != capitals[1] && rand != capitals[2]) {
+            if (rand > 1 && rand != capitals[0] && rand != capitals[1] && rand != capitals[2] && rand != capitals[3]) {
                 capitals[valueCounter] = rand;
                 valueCounter++;
                 if (i == 0) {

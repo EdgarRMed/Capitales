@@ -36,7 +36,7 @@ public class ContinentController implements Initializable {
 
     public void printButtonsContent(){
         String []content = model.generateCapitalsForButtons(model.arrayOceania, model.oceania);
-        for (int i=0;i<4;i++)
+        for (int i=0;i<5;i++)
             System.out.println(content[i]);
     }
 
