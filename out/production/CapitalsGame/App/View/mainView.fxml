@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
@@ -41,6 +44,16 @@
                      <top>
                         <HBox prefHeight="100.0" prefWidth="200.0" styleClass="background-light" BorderPane.alignment="CENTER" />
                      </top>
+                     <center>
+                        <BarChart fx:id="mainChart" styleClass="chart-bar" title="Aprendizaje" BorderPane.alignment="CENTER">
+                          <xAxis>
+                            <CategoryAxis label="Continente" side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" label="Porcentaje de conocimiento" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </center>
                   </BorderPane>
                </children>
             </AnchorPane>

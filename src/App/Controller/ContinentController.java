@@ -1,5 +1,6 @@
 package App.Controller;
 
+import App.Model.Model;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,8 @@ import java.util.ResourceBundle;
 
 public class ContinentController implements Initializable {
 
+    protected Model model = new Model(); // Instancia del modelo que puede ser leida por el controlador
+
     @FXML
     Label continentNameLabel;
 
@@ -29,6 +32,12 @@ public class ContinentController implements Initializable {
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
             window.setScene(continentViewScene);
             window.show();
+    }
+
+    public void printButtonsContent(){
+        String []content = model.generateCapitalsForButtons(model.arrayOceania, model.oceania);
+        for (int i=0;i<4;i++)
+            System.out.println(content[i]);
     }
 
     @FXML

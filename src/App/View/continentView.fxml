@@ -42,7 +42,7 @@
                         <Insets left="65.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" text="Button" />
+                  <Button mnemonicParsing="false" onAction="#printButtonsContent" prefHeight="48.0" prefWidth="350.0" text="Button" />
                   <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" text="Button" />
                   <Button layoutX="10.0" layoutY="283.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" text="Button" />
                   <Button layoutX="10.0" layoutY="346.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" text="Button" />

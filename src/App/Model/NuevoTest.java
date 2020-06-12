@@ -11,7 +11,8 @@ public class NuevoTest {
 
         /* Se abre el fichero para se lectura */
         try {
-            archivo = new File ("M:\\Proyectos\\Java\\CapitalsGame\\Oceania.txt");//la ruta se puede cambiar por una variale que la contenga
+
+            archivo = new File ("M:\\Proyectos\\Java\\CapitalsGame\\ContinentsTXT\\Oceania.txt");//la ruta se puede cambiar por una variale que la contenga
             fileReader = new FileReader (archivo);
             bufferedReader = new BufferedReader(fileReader);
 
@@ -38,7 +39,7 @@ public class NuevoTest {
         a tomar en cuenta para procesarse pero si la capital para poner como opcion*/
             int valueCounter = 0;
             int rand;
-            int [] capitals = {0,0,0,0};
+            int [] capitals = {0,0,0,0}; // Array para comprobar que no se repitan capitales
             for (int i = 0; i < 4; i++) {
 
                 rand = continente.random(cont);
