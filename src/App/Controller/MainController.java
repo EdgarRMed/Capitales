@@ -6,6 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -17,6 +21,15 @@ import java.util.ResourceBundle;
 
 
 public class MainController implements Initializable {
+
+    @FXML
+    private BarChart<?, ?> mainChart;
+
+    @FXML
+    private CategoryAxis x;
+
+    @FXML
+    private NumberAxis y;
 
     @FXML
     // Se mueve a la ventana de juego
@@ -32,6 +45,13 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        XYChart.Series set1 = new XYChart.Series<>();
 
+        set1.getData().add(new XYChart.Data("América", 50.0));
+        set1.getData().add(new XYChart.Data("Europa", 30.0));
+        set1.getData().add(new XYChart.Data("Asia", 20.0));
+        set1.getData().add(new XYChart.Data("África", 70.0));
+        set1.getData().add(new XYChart.Data("Oceanía", 45.0));
+        mainChart.getData().addAll(set1);
     }
 }

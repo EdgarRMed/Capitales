@@ -160,3 +160,33 @@
     -fx-background-color: derive(-fx-focus-color,30%);
 }
 /*********************** Fin de Estilos para el push button y sus estados *********************************************/
+
+/************************************ Estilos para la gráfica *********************************************************/
+
+.chart-bar {
+    -fx-background-color: rgba(0,168,355,0.05);
+    -fx-border-color: rgba(0,168,355,0.3) rgba(0,168,355,0.3)
+        transparent rgba(0,168,355,0.3);
+    -fx-background-radius: 0;
+    -fx-background-position: left center;
+}
+
+.data0.chart-bar {
+    -fx-background-color: linear-gradient(#b21e35, #bd1f36, #c71f37, #da1e37, #e01e37);
+}
+
+.data1.chart-bar {
+    -fx-background-color: linear-gradient( #2d00f7, #6a00f4, #8900f2, #a100f2, #b100e8);
+}
+
+.data2.chart-bar {
+    -fx-background-color: linear-gradient( #c0fdff, #c8e7ff, #d0d1ff, #d8bbff, #deaaff);
+}
+
+.data3.chart-bar {
+    -fx-background-color: linear-gradient(#d00000, #dc2f02, #e85d04, #f48c06, #faa307);
+}
+
+.data4.chart-bar {
+    -fx-background-color: linear-gradient( #05668d, #028090, #00a896, #02c39a);
+}
