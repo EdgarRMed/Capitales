@@ -11,6 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -18,6 +20,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 public class ContinentController implements Initializable {
@@ -40,6 +44,8 @@ public class ContinentController implements Initializable {
     AnchorPane continentAnchor;
     @FXML
     VBox vboxContinent;
+    @FXML
+    ImageView banderaPais;
 
     Nodo aux;
     int correctas, incorrectas;
@@ -62,6 +68,12 @@ public class ContinentController implements Initializable {
         capitalBtn2.setText(aux.possibleCapitals[1]);
         capitalBtn3.setText(aux.possibleCapitals[2]);
         capitalBtn4.setText(aux.possibleCapitals[3]);
+        //Path caminoImagen = new Paths.get("src/App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png");
+        // "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png"
+        String imagePath = "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png";
+        System.out.println(imagePath);
+        banderaPais.setImage(new Image(getClass().getClassLoader().getResource(imagePath).toExternalForm()));
+
     }
 
     @FXML
