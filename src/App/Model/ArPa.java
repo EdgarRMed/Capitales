@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class ArPa implements Serializable {
     public Nodo raiz;
-    String filename;
+    public boolean segundaOportunidad = false;
 
     public ArPa() {
         raiz = null;
@@ -27,6 +27,24 @@ public class ArPa implements Serializable {
             aux = aux.sig;
         }
         return aux;
+    }
+
+    public void eliminarCorrectos() {
+        Nodo actual;
+        for (actual = raiz; actual != null; actual = actual.sig) {
+            actual.seleccionado = 0;
+            if (actual.correcto) {
+                if (actual == raiz) {
+                    if (actual.sig != null)
+                        actual.sig.ant = null;
+                    raiz = actual.sig;
+                } else {
+                    if (actual.sig != null)
+                        actual.sig.ant = actual.ant;
+                    actual.ant.sig = actual.sig;
+                }
+            }
+        }
     }
 
     public int random(int cont) {

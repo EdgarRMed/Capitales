@@ -28,8 +28,6 @@ Corea del Norte
 Pyongyang
 Corea del Sur
 Seúl
-Palestina
-Ramala
 Emiratos Árabes Unidos
 Abu Dhabi
 Filipinas
@@ -50,7 +48,7 @@ Japón
 Tokio
 Jordania
 Ammán
-Kazajstán
+Kazajistán
 Astana
 Kirguistán
 Bishkek

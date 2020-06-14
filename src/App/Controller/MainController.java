@@ -1,6 +1,7 @@
 package App.Controller;
 
 import App.Model.Model;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -13,7 +14,6 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -67,6 +67,7 @@ public class MainController implements Initializable {
             case "América":
                 correctAmerica = 0;
                 model.generateCapitalsForButtons(model.arrayAmerica, model.americaFile);
+                continentController.continente = model.arrayAmerica;
                 continentController.aux = model.arrayAmerica.getRaiz();
                 continentController.cambiarPais();
 
@@ -74,6 +75,7 @@ public class MainController implements Initializable {
             case "Europa":
                 correctEurope = 0;
                 model.generateCapitalsForButtons(model.arrayEurope, model.europeFile);
+                continentController.continente = model.arrayEurope;
                 continentController.aux = model.arrayEurope.getRaiz();
                 continentController.cambiarPais();
 
@@ -81,6 +83,7 @@ public class MainController implements Initializable {
             case "Asia":
                 correctAsia = 0;
                 model.generateCapitalsForButtons(model.arrayAsia, model.asiaFile);
+                continentController.continente = model.arrayAsia;
                 continentController.aux = model.arrayAsia.getRaiz();
                 continentController.cambiarPais();
 
@@ -88,6 +91,7 @@ public class MainController implements Initializable {
             case "África":
                 correctAfrica = 0;
                 model.generateCapitalsForButtons(model.arrayAfrica, model.africaFile);
+                continentController.continente = model.arrayAfrica;
                 continentController.aux = model.arrayAfrica.getRaiz();
                 continentController.cambiarPais();
 
@@ -95,6 +99,7 @@ public class MainController implements Initializable {
             case "Oceanía":
                 correctOceania = 0;
                 model.generateCapitalsForButtons(model.arrayOceania, model.oceaniaFile);
+                continentController.continente = model.arrayOceania;
                 continentController.aux = model.arrayOceania.getRaiz();
                 continentController.cambiarPais();
 
@@ -107,7 +112,7 @@ public class MainController implements Initializable {
         window.show();
     }
 
-    public void setChart(){
+    public void setChart() {
         XYChart.Series set1 = new XYChart.Series<>();
 
         set1.getData().add(new XYChart.Data("América", correctAmerica));
