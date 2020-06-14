@@ -117,6 +117,7 @@ public class ContinentController implements Initializable {
         aux.correcto = ((Button) event.getSource()).getText().equals(aux.capital);
         if (aux.correcto)
             correctas ++;
+        System.out.println(correctas);
         aux.seleccionado = Integer.parseInt(String.valueOf(nombreBoton.charAt(nombreBoton.length()-1)));
 
         Button selectedButton = ((Button) event.getSource());
