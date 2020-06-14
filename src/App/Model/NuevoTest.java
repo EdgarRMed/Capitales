@@ -11,8 +11,9 @@ public class NuevoTest {
 
         /* Se abre el fichero para se lectura */
         try {
+            System.out.println("asdf");
 
-            archivo = new File ("M:\\Proyectos\\Java\\CapitalsGame\\ContinentsTXT\\Oceania.txt");//la ruta se puede cambiar por una variale que la contenga
+            archivo = new File ("ContinentsTXT/Oceania.txt");//la ruta se puede cambiar por una variale que la contenga
             fileReader = new FileReader (archivo);
             bufferedReader = new BufferedReader(fileReader);
 
@@ -56,7 +57,6 @@ public class NuevoTest {
                         System.out.println(temp.capital);
                     }
                 } else i--;
-
 
             }
 

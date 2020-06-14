@@ -24,7 +24,7 @@ public class ContinentController implements Initializable {
     Label continentNameLabel;
 
     @FXML
-    // Regeresa al menú principal
+    // Regresa al menú principal
     public void backToMainScene (ActionEvent event) throws IOException {
             URL url = new File("src/App/View/mainView.fxml").toURI().toURL();
             Parent mainViewParent = FXMLLoader.load(url);
@@ -35,9 +35,9 @@ public class ContinentController implements Initializable {
     }
 
     public void printButtonsContent(){
-        String []content = model.generateCapitalsForButtons(model.arrayOceania, model.oceania);
-        for (int i=0;i<5;i++)
-            System.out.println(content[i]);
+//        String []content = model.generateCapitalsForButtons(model.arrayOceania, model.oceania);
+//        for (int i=0;i<5;i++)
+//            System.out.println(content[i]);
     }
 
     @FXML

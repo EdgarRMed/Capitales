@@ -28,7 +28,7 @@
             </ToolBar>
          </bottom>
          <top>
-            <Label fx:id="continentNameLabel" prefHeight="65.0" prefWidth="587.0" styleClass="label-bright" text="INSERTAR  NOMBRE DEL CONTINENTE AQUÍ" BorderPane.alignment="CENTER" />
+            <Label fx:id="continentNameLabel" alignment="CENTER" prefHeight="53.0" prefWidth="598.0" styleClass="label-bright" text="INSERTAR  NOMBRE DEL CONTINENTE AQUÍ" textAlignment="CENTER" BorderPane.alignment="CENTER" />
          </top>
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
@@ -36,7 +36,7 @@
                   <Label alignment="CENTER" prefHeight="21.0" prefWidth="389.0" styleClass="label-game" text="¿ Cuál es la capital de + nombre?" textAlignment="CENTER" textFill="#e5e1e1" />
                   <ImageView fitHeight="150.0" fitWidth="348.0" pickOnBounds="true" preserveRatio="true" styleClass="label-bright">
                      <image>
-                        <Image url="@../../../images/francia.jpg" />
+                        <Image url="@../images/francia.jpg" />
                      </image>
                      <VBox.margin>
                         <Insets left="65.0" />

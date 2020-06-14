@@ -17,10 +17,22 @@ import javafx.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
 import java.util.ResourceBundle;
 
 
 public class MainController implements Initializable {
+    @FXML
+    private Button americaBtn;
+    @FXML
+    private Button europeBtn;
+    @FXML
+    private Button asiaBtn;
+    @FXML
+    private Button africaBtn;
+    @FXML
+    private Button oceaniaBtn;
+
 
     @FXML
     private BarChart<?, ?> mainChart;
@@ -34,8 +46,27 @@ public class MainController implements Initializable {
     @FXML
     // Se mueve a la ventana de juego
     private void createNewContinentScene (ActionEvent event) throws IOException {
-        URL url = new File("src/App/View/continentView.fxml").toURI().toURL();
-        Parent mainViewParent = FXMLLoader.load(url);
+        // Se pasan valores al controlador de la ventana continente
+//        FXMLLoader loader = new FXMLLoader(getClass().getResource("src/App/View/continentView.fxml"));
+//        ContinentController continentController = loader.getController();
+//        if (continentController == null)
+//            System.out.println("puto");
+//        //continentController.setContinentName(americaBtn.getText());
+//
+//        URL url = new File("src/App/View/continentView.fxml").toURI().toURL();
+//        Parent mainViewParent = FXMLLoader.load(url);
+//        Scene continentViewScene = new Scene(mainViewParent);
+//        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+//        window.setScene(continentViewScene);
+//        window.show();
+
+        System.out.println(getClass().getClassLoader().getResource("App/View/continentView.fxml"));
+
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("App/View/continentView.fxml"));
+        Parent mainViewParent = loader.load();
+        ContinentController continentController = loader.getController();
+        continentController.setContinentName(((Button)event.getSource()).getText());
+
         Scene continentViewScene = new Scene(mainViewParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(continentViewScene);

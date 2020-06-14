@@ -10,34 +10,33 @@ public class LoadFile {
 
     // Este método devuelve un array con los datos del continente
 
-    public ArPa loadContinent(String name){
+    public ArPa loadContinent(String name) {
         File file;
         FileReader fileReader = null;
-        BufferedReader bufferedReader ;
-        ArPa continent= new ArPa();
+        BufferedReader bufferedReader;
+        ArPa continent = new ArPa();
 
         /* Se abre el fichero para se lectura */
         try {
             // Cambiar el pathname segun el equipo donde se corre el proyecto
-            file = new File ("M:\\Proyectos\\Java\\CapitalsGame\\ContinentsTXT\\"+name+".txt");
-            fileReader = new FileReader (file);
+            file = new File("src/App/ContinentsTXT/" + name + ".txt");
+            fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
 
             // Lectura del fichero
             String linea;
-            while((linea = bufferedReader.readLine()) != null){
+            while ((linea = bufferedReader.readLine()) != null) {
                 continent.insertar(linea, bufferedReader.readLine());
                 cont += 1;
-
             }
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally{
-            try{
-                if( null != fileReader ){
+        } finally {
+            try {
+                if (null != fileReader) {
                     fileReader.close();
                 }
-            }catch (Exception e2){
+            } catch (Exception e2) {
                 e2.printStackTrace();
             }
         }
