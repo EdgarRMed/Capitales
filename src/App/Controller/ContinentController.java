@@ -1,5 +1,6 @@
 package App.Controller;
 
+import App.Model.ArPa;
 import App.Model.Model;
 import App.Model.Nodo;
 import javafx.event.ActionEvent;
@@ -54,6 +55,7 @@ public class ContinentController implements Initializable {
     // Regresa al menú principal
     @FXML
     public void backToMainScene(ActionEvent event) throws IOException {
+        setChartValues();
         URL url = new File("src/App/View/mainView.fxml").toURI().toURL();
         Parent mainViewParent = FXMLLoader.load(url);
         Scene continentViewScene = new Scene(mainViewParent);
@@ -72,7 +74,7 @@ public class ContinentController implements Initializable {
         // "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png"
         String imagePath = "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png";
         System.out.println(imagePath);
-        banderaPais.setImage(new Image(getClass().getClassLoader().getResource(imagePath).toExternalForm()));
+        //banderaPais.setImage(new Image(getClass().getClassLoader().getResource(imagePath).toExternalForm()));
 
     }
 
@@ -112,7 +114,9 @@ public class ContinentController implements Initializable {
         capitalBtn4.setStyle("-fx-background-color: white");
 
         String nombreBoton = ((Button) event.getSource()).getId();
-        aux.correcto = nombreBoton.equals(aux.capital);
+        aux.correcto = ((Button) event.getSource()).getText().equals(aux.capital);
+        if (aux.correcto)
+            correctas++;
         aux.seleccionado = Integer.parseInt(String.valueOf(nombreBoton.charAt(nombreBoton.length()-1)));
 
         Button selectedButton = ((Button) event.getSource());
@@ -120,6 +124,37 @@ public class ContinentController implements Initializable {
         selectedButton.getStyleClass().add("button1");
         selectedButton.setStyle("-fx-background-color: linear-gradient(#80ffdb, #72efdd)");
 
+    }
+
+    @FXML
+    // Cambia los valores de la grafica dependiendo las respuestas del usuario
+    public void setChartValues() throws IOException {
+        int totalCountries;
+        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("App/View/mainView.fxml"));
+        MainController mainController = loader.getController();
+        switch (continentNameLabel.getText()){
+            case "América":
+                totalCountries = 35;
+                MainController.correctAmerica = (correctas*100)/totalCountries;
+                System.out.println(MainController.correctAmerica);
+                break;
+            case "Europa":
+                totalCountries = 50;
+                MainController.correctEurope = (correctas*100)/totalCountries;
+                break;
+            case "Asia":
+                totalCountries = 49;
+                MainController.correctAsia = (correctas*100)/totalCountries;
+                break;
+            case "África":
+                totalCountries = 54;
+                MainController.correctAfrica = (correctas*100)/totalCountries;
+                break;
+            case "Oceanía":
+                totalCountries = 14;
+                MainController.correctOceania = (correctas*100)/totalCountries;
+                break;
+        }
     }
 
     @FXML

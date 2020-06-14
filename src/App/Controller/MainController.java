@@ -21,6 +21,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
+
+    protected static int correctAmerica;
+    protected static int correctEurope;
+    protected static int correctAsia;
+    protected static int correctAfrica;
+    protected static int correctOceania;
+
     @FXML
     private Button americaBtn;
     @FXML
@@ -73,30 +80,35 @@ public class MainController implements Initializable {
 
         switch (nombreContinente) {
             case "América":
+                correctAmerica = 0;
                 model.generateCapitalsForButtons(model.arrayAmerica, model.americaFile);
                 continentController.aux = model.arrayAmerica.getRaiz();
                 continentController.cambiarPais();
 
                 break;
             case "Europa":
+                correctEurope = 0;
                 model.generateCapitalsForButtons(model.arrayEurope, model.europeFile);
                 continentController.aux = model.arrayEurope.getRaiz();
                 continentController.cambiarPais();
 
                 break;
             case "Asia":
+                correctAsia = 0;
                 model.generateCapitalsForButtons(model.arrayAsia, model.asiaFile);
                 continentController.aux = model.arrayAsia.getRaiz();
                 continentController.cambiarPais();
 
                 break;
             case "África":
+                correctAfrica = 0;
                 model.generateCapitalsForButtons(model.arrayAfrica, model.africaFile);
                 continentController.aux = model.arrayAfrica.getRaiz();
                 continentController.cambiarPais();
 
                 break;
             case "Oceanía":
+                correctOceania = 0;
                 model.generateCapitalsForButtons(model.arrayOceania, model.oceaniaFile);
                 continentController.aux = model.arrayOceania.getRaiz();
                 continentController.cambiarPais();
@@ -110,16 +122,20 @@ public class MainController implements Initializable {
         window.show();
     }
 
+    public void setChart(){
+        XYChart.Series set1 = new XYChart.Series<>();
+
+        set1.getData().add(new XYChart.Data("América", correctAmerica));
+        set1.getData().add(new XYChart.Data("Europa", correctEurope));
+        set1.getData().add(new XYChart.Data("Asia", correctAsia));
+        set1.getData().add(new XYChart.Data("África", correctAfrica));
+        set1.getData().add(new XYChart.Data("Oceanía", correctOceania));
+        mainChart.getData().addAll(set1);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        XYChart.Series set1 = new XYChart.Series<>();
-
-        set1.getData().add(new XYChart.Data("América", 50.0));
-        set1.getData().add(new XYChart.Data("Europa", 30.0));
-        set1.getData().add(new XYChart.Data("Asia", 20.0));
-        set1.getData().add(new XYChart.Data("África", 70.0));
-        set1.getData().add(new XYChart.Data("Oceanía", 45.0));
-        mainChart.getData().addAll(set1);
+        setChart();
+        System.out.println(correctAmerica);
     }
 }
