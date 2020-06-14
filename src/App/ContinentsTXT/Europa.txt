@@ -1,0 +1,100 @@
+Albania
+Tirana
+Alemania
+Berlín
+Andorra
+Andorra la Vieja
+Armenia
+Ereván
+Austria
+Viena
+Azerbaiyán
+Bakú
+Bélgica
+Bruselas
+Bielorrusia
+Minsk
+Bosnia y Herzegovina
+Sarajevo
+Bulgaria
+Sofía
+Chipre
+Nicosia
+Croacia
+Zagreb
+Dinamarca
+Copenhague
+Eslovaquia
+Bratislava
+Eslovenia
+Liubliana
+España
+Madrid
+Estonia
+Tallin
+Finlandia
+Helsinki
+Francia
+París
+Georgia
+Tiflis
+Grecia
+Atenas
+Hungría
+Budapest
+Irlanda
+Dublín
+Islandia
+Reikiavik
+Italia
+Roma
+Kazajistán
+Astana
+Letonia
+Riga
+Liechtenstein
+Vaduz
+Lituania
+Vilna
+Luxemburgo
+Ciudad de Luxemburgo
+Macedonia del Norte
+Skopie
+Malta
+La Valeta
+Moldavia
+Chisináu
+Mónaco
+Ciudad de Mónaco
+Montenegro
+Podgorica
+Noruega
+Oslo
+Países Bajos
+Ámsterdam
+Polonia
+Varsovia
+Portugal
+Lisboa
+Reino Unido
+Londres
+República Checa
+Praga
+Rumania
+Bucarest
+Rusia
+Moscú
+San Marino
+Ciudad de San Marino
+Serbia
+Belgrado
+Suecia
+Estocolmo
+Suiza
+Berna
+Turquía
+Ankara
+Ucrania
+Kiev
+Vaticano
+Ciudad del Vaticano
