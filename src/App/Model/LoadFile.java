@@ -1,44 +1,33 @@
 package App.Model;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class LoadFile {
 
     public int cont = 0;
-
     // Este método devuelve un array con los datos del continente
 
     public ArPa loadContinent(String name) {
-        File file;
-        FileReader fileReader = null;
-        BufferedReader bufferedReader;
+        Path caminoArchivo = Paths.get("src/App/ContinentsTXT/" + name + ".txt");
+        Scanner sc;
         ArPa continent = new ArPa();
 
         /* Se abre el fichero para se lectura */
         try {
             // Cambiar el pathname segun el equipo donde se corre el proyecto
-            file = new File("src/App/ContinentsTXT/" + name + ".txt");
-            fileReader = new FileReader(file);
-            bufferedReader = new BufferedReader(fileReader);
+            sc = new Scanner(caminoArchivo);
 
             // Lectura del fichero
-            String linea;
-            while ((linea = bufferedReader.readLine()) != null) {
-                continent.insertar(linea, bufferedReader.readLine());
-                cont += 1;
+            while (sc.hasNextLine()) {
+                continent.insertar(sc.nextLine(), sc.nextLine());
+                cont++;
             }
-        } catch (Exception e) {
+
+        } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (null != fileReader) {
-                    fileReader.close();
-                }
-            } catch (Exception e2) {
-                e2.printStackTrace();
-            }
         }
 
         return continent;

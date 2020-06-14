@@ -30,7 +30,6 @@ public class ArPa implements Serializable {
     }
 
     public int random(int cont) {
-        System.out.println(cont);
         return new Random().nextInt(cont);
     }
 

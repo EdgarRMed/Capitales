@@ -1,7 +1,6 @@
 package App.Controller;
 
 import App.Model.Model;
-import App.Model.Nodo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -54,20 +53,6 @@ public class MainController implements Initializable {
     @FXML
     // Se mueve a la ventana de juego
     private void createNewContinentScene(ActionEvent event) throws IOException {
-        // Se pasan valores al controlador de la ventana continente
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("src/App/View/continentView.fxml"));
-//        ContinentController continentController = loader.getController();
-//        if (continentController == null)
-//            System.out.println("puto");
-//        //continentController.setContinentName(americaBtn.getText());
-//
-//        URL url = new File("src/App/View/continentView.fxml").toURI().toURL();
-//        Parent mainViewParent = FXMLLoader.load(url);
-//        Scene continentViewScene = new Scene(mainViewParent);
-//        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-//        window.setScene(continentViewScene);
-//        window.show();
-
         String nombreContinente = ((Button) event.getSource()).getText();
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("App/View/continentView.fxml"));
@@ -136,6 +121,5 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setChart();
-        System.out.println(correctAmerica);
     }
 }

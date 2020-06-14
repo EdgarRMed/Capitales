@@ -70,12 +70,8 @@ public class ContinentController implements Initializable {
         capitalBtn2.setText(aux.possibleCapitals[1]);
         capitalBtn3.setText(aux.possibleCapitals[2]);
         capitalBtn4.setText(aux.possibleCapitals[3]);
-        //Path caminoImagen = new Paths.get("src/App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png");
-        // "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png"
         String imagePath = "App/images/"+continentNameLabel.getText()+"/"+aux.pais+".png";
-        System.out.println(imagePath);
-        //banderaPais.setImage(new Image(getClass().getClassLoader().getResource(imagePath).toExternalForm()));
-
+        banderaPais.setImage(new Image(getClass().getClassLoader().getResource(imagePath).toExternalForm()));
     }
 
     @FXML
@@ -117,7 +113,6 @@ public class ContinentController implements Initializable {
         aux.correcto = ((Button) event.getSource()).getText().equals(aux.capital);
         if (aux.correcto)
             correctas ++;
-        System.out.println(correctas);
         aux.seleccionado = Integer.parseInt(String.valueOf(nombreBoton.charAt(nombreBoton.length()-1)));
 
         Button selectedButton = ((Button) event.getSource());
@@ -129,15 +124,12 @@ public class ContinentController implements Initializable {
 
     @FXML
     // Cambia los valores de la grafica dependiendo las respuestas del usuario
-    public void setChartValues() throws IOException {
+    public void setChartValues() {
         int totalCountries;
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("App/View/mainView.fxml"));
-        MainController mainController = loader.getController();
         switch (continentNameLabel.getText()){
             case "América":
                 totalCountries = 35;
                 MainController.correctAmerica = (correctas*100)/totalCountries;
-                System.out.println(MainController.correctAmerica);
                 break;
             case "Europa":
                 totalCountries = 50;

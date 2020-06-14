@@ -1,5 +1,5 @@
 package App.Model;
-import java.util.Arrays;
+
 import java.util.Random;
 
 public class Model {
@@ -32,7 +32,7 @@ public class Model {
         int cont = file.cont;
         Random random = new Random();
 
-         // Array para comprobar que no se repitan capitales
+        // Array para comprobar que no se repitan capitales
 
         int paisIndex = 0;
         for (Nodo aux = continent.raiz; aux != null; aux = aux.sig, paisIndex++) {
