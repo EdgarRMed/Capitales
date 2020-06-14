@@ -1,21 +1,22 @@
 package App.Model;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Model {
 
     // Se cargan los arrays de cada continente
 
-    public LoadFile america = new LoadFile();
-    public LoadFile europe = new LoadFile();
-    public LoadFile asia = new LoadFile();
-    public LoadFile africa = new LoadFile();
-    public LoadFile oceania = new LoadFile();
+    public LoadFile americaFile = new LoadFile();
+    public LoadFile europeFile = new LoadFile();
+    public LoadFile asiaFile = new LoadFile();
+    public LoadFile africaFile = new LoadFile();
+    public LoadFile oceaniaFile = new LoadFile();
 
-    public ArPa arrayAmerica = america.loadContinent("America");
-    public ArPa arrayEurope = europe.loadContinent("Europa");
-    public ArPa arrayAsia = asia.loadContinent("Asia");
-    public ArPa arrayAfrica = africa.loadContinent("Africa");
-    public ArPa arrayOceania = oceania.loadContinent("Oceania");
+    public ArPa arrayAmerica = americaFile.loadContinent("America");
+    public ArPa arrayEurope = europeFile.loadContinent("Europa");
+    public ArPa arrayAsia = asiaFile.loadContinent("Asia");
+    public ArPa arrayAfrica = africaFile.loadContinent("Africa");
+    public ArPa arrayOceania = oceaniaFile.loadContinent("Oceania");
 
 
     /* ---------------------- DESCRIPCION DEL MÉTODO -------------------------------------------------------------------
@@ -34,34 +35,39 @@ public class Model {
          // Array para comprobar que no se repitan capitales
 
         int paisIndex = 0;
-        for (Node aux = continent.raiz; aux != null; aux = aux.sig, paisIndex++) {
-            int[] capitals = new int[3];
-            for (int i = 0; i < 3; i++) {   //Generar numeros aleatorios irrepetibles
-                int aux2 = i;
+        for (Nodo aux = continent.raiz; aux != null; aux = aux.sig, paisIndex++) {
+            int[] capitals = new int[4];
+
+            int i = 0;
+            while (i < 4) {
                 int x = random.nextInt(cont);
+                boolean yaEsta = false;
+
                 for (int j = 0; j <= i; j++) {
                     if (x == capitals[j] && paisIndex != x) {
-                        i--;
+                        yaEsta = true;
                         break;
                     }
                 }
-                if (i < aux2) {
-                    capitals[i] = x;
+                if (yaEsta) {
+                    continue;
                 }
+                capitals[i] = x;
+                i++;
             }
 
             String[] capitalsForButtons = new String[4];
             capitalsForButtons[new Random().nextInt(4)] = aux.capital;
 
-            int j = 0;
-            for (int i = 0; i < 4; i++) {
-                Node temp = continent.recorrido(capitals[j]);
+            for (i = 0; i < 4; i++) {
+                Nodo temp = continent.recorrido(capitals[i]);
 
                 if (capitalsForButtons[i] == null) {
                     capitalsForButtons[i] = temp.capital;
-                    j++;
                 }
             }
+
+            aux.possibleCapitals = capitalsForButtons;
         }
     }
     /*public String[] generateCapitalsForButtons(ArPa continent, LoadFile file) {

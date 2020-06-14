@@ -1,5 +1,7 @@
 package App.Controller;
 
+import App.Model.Model;
+import App.Model.Nodo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,12 +16,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Path;
 import java.util.ResourceBundle;
-
 
 public class MainController implements Initializable {
     @FXML
@@ -33,6 +32,8 @@ public class MainController implements Initializable {
     @FXML
     private Button oceaniaBtn;
 
+    protected Model model = new Model();
+
 
     @FXML
     private BarChart<?, ?> mainChart;
@@ -45,7 +46,7 @@ public class MainController implements Initializable {
 
     @FXML
     // Se mueve a la ventana de juego
-    private void createNewContinentScene (ActionEvent event) throws IOException {
+    private void createNewContinentScene(ActionEvent event) throws IOException {
         // Se pasan valores al controlador de la ventana continente
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("src/App/View/continentView.fxml"));
 //        ContinentController continentController = loader.getController();
@@ -60,15 +61,51 @@ public class MainController implements Initializable {
 //        window.setScene(continentViewScene);
 //        window.show();
 
-        System.out.println(getClass().getClassLoader().getResource("App/View/continentView.fxml"));
+        String nombreContinente = ((Button) event.getSource()).getText();
 
         FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("App/View/continentView.fxml"));
         Parent mainViewParent = loader.load();
         ContinentController continentController = loader.getController();
-        continentController.setContinentName(((Button)event.getSource()).getText());
+        continentController.setContinentName(nombreContinente);
+
+        continentController.correctas = 0;
+        continentController.incorrectas = 0;
+
+        switch (nombreContinente) {
+            case "América":
+                model.generateCapitalsForButtons(model.arrayAmerica, model.americaFile);
+                continentController.aux = model.arrayAmerica.getRaiz();
+                continentController.cambiarPais();
+
+                break;
+            case "Europa":
+                model.generateCapitalsForButtons(model.arrayEurope, model.europeFile);
+                continentController.aux = model.arrayEurope.getRaiz();
+                continentController.cambiarPais();
+
+                break;
+            case "Asia":
+                model.generateCapitalsForButtons(model.arrayAsia, model.asiaFile);
+                continentController.aux = model.arrayAsia.getRaiz();
+                continentController.cambiarPais();
+
+                break;
+            case "África":
+                model.generateCapitalsForButtons(model.arrayAfrica, model.africaFile);
+                continentController.aux = model.arrayAfrica.getRaiz();
+                continentController.cambiarPais();
+
+                break;
+            case "Oceanía":
+                model.generateCapitalsForButtons(model.arrayOceania, model.oceaniaFile);
+                continentController.aux = model.arrayOceania.getRaiz();
+                continentController.cambiarPais();
+
+                break;
+        }
 
         Scene continentViewScene = new Scene(mainViewParent);
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(continentViewScene);
         window.show();
     }

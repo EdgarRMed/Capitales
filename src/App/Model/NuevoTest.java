@@ -11,9 +11,8 @@ public class NuevoTest {
 
         /* Se abre el fichero para se lectura */
         try {
-            System.out.println("asdf");
 
-            archivo = new File ("ContinentsTXT/Oceania.txt");//la ruta se puede cambiar por una variale que la contenga
+            archivo = new File ("src/App/ContinentsTXT/America.txt");//la ruta se puede cambiar por una variale que la contenga
             fileReader = new FileReader (archivo);
             bufferedReader = new BufferedReader(fileReader);
 
@@ -44,7 +43,7 @@ public class NuevoTest {
             for (int i = 0; i < 4; i++) {
 
                 rand = continente.random(cont);
-                Node temp = continente.recorrido(rand);
+                Nodo temp = continente.recorrido(rand);
                 if (rand > 1 && rand != capitals[0] && rand != capitals[1] && rand != capitals[2]) {
                     capitals[valueCounter] = rand;
                     valueCounter++;
@@ -52,7 +51,7 @@ public class NuevoTest {
                         System.out.println(temp.pais);
                         System.out.println();
                         System.out.println(temp.capital);
-                        temp.estado = true;
+                        temp.correcto = true;
                     } else {
                         System.out.println(temp.capital);
                     }

@@ -1,21 +1,21 @@
-Angola
+ï»¿Angola
 Luanda
 Argelia
 Argel
-Benín
+BenÃ­n
 Porto Novo
 Botsuana
 Gaborone
 Burkina Faso
-Uagadugú
+UagadugÃº
 Burundi
 Gitega
 Cabo Verde
 Praia
-Camerún
-Yaundé
+CamerÃºn
+YaundÃ©
 Chad
-N’Djamena
+Nâ€™Djamena
 Comoras
 Moroni
 Congo
@@ -28,9 +28,9 @@ Egipto
 El Cairo
 Eritrea
 Asmara
-Etiopía
-Adís Abeba
-Gabón
+EtiopÃ­a
+AdÃ­s Abeba
+GabÃ³n
 Libreville
 Gambia
 Banjul
@@ -49,12 +49,12 @@ Maseru
 Liberia
 Monrovia
 Libia
-Trípoli
+TrÃ­poli
 Madagascar
 Antananarivo
 Malawi
-Lilongüe
-Malí
+LilongÃ¼e
+MalÃ­
 Bamako
 Marruecos
 Rabat
@@ -66,18 +66,18 @@ Mozambique
 Maputo
 Namibia
 Windhoek
-Níger
+NÃ­ger
 Niamey
 Nigeria
 Abuja
-República Centroafricana
+RepÃºblica Centroafricana
 Bangui
-República Democrática del Congo
+RepÃºblica DemocrÃ¡tica del Congo
 Kinshasa
 Ruanda
 Kigali
-St. Tomé y Príncipe
-Santo Tomé
+St. TomÃ© y PrÃ­ncipe
+Santo TomÃ©
 Senegal
 Dakar
 Seychelles
@@ -86,20 +86,20 @@ Sierra Leona
 Freetown
 Somalia
 Mogadiscio
-Sudáfrica
+SudÃ¡frica
 Ciudad del Cabo
-Sudán
+SudÃ¡n
 Jartum
-Sudán del Sur
+SudÃ¡n del Sur
 Yuba
 Swaziland Islandia
 Mbabane
 Tanzania
 Dodoma
 Togo
-Lomé
-Túnez
-Túnez
+LomÃ©
+TÃºnez
+TÃºnez
 Uganda
 Kampala
 Zambia

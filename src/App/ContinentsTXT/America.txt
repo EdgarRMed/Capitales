@@ -3,23 +3,23 @@ Saint John's
 Argentina
 Buenos Aires
 Bahamas
-Nasáu
+NasÃ¡u
 Barbados
 Bridgetown
 Belice
-Belmopán
+BelmopÃ¡n
 Bolivia
 Sucre
 Brasil
 Brasilia
-Canadá
+CanadÃ¡
 Ottawa
 Chile
 Santiago
 Colombia
-Bogotá
+BogotÃ¡
 Costa Rica
-San José
+San JosÃ©
 Cuba
 La Habana
 Dominica
@@ -36,34 +36,34 @@ Guatemala
 Ciudad de Guatemala
 Guyana
 Georgetown
-Haití
-Puerto Príncipe
+HaitÃ­
+Puerto PrÃ­ncipe
 Honduras
 Tegucigalpa
 Jamaica
 Kingston
-México
-Ciudad de México
+MÃ©xico
+Ciudad de MÃ©xico
 Nicaragua
 Managua
-Panamá
-Ciudad de Panamá
+PanamÃ¡
+Ciudad de PanamÃ¡
 Paraguay
-Asunción
-Perú
+AsunciÃ³n
+PerÃº
 Lima
-República Dominicana
+RepÃºblica Dominicana
 Santo Domingo
-San Cristóbal y Neives
+San CristÃ³bal y Neives
 Basseterre
 San Vicente y las Granadinas
 Kingstown
-Santa Lucía
+Santa LucÃ­a
 Castries
 Surinam
 Paramaribo
 Trinidad y Tobago
-Puerto España
+Puerto EspaÃ±a
 Uruguay
 Montevideo
 Venezuela

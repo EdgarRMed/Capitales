@@ -57,7 +57,7 @@
 }
 
 .table-view .column-header, .table-view .filler {
-    -fx-size: 35;
+    -fx-size: 35px;
     -fx-border-width: 0 0 1 0;
     -fx-background-color: transparent;
     -fx-border-color:
@@ -140,7 +140,7 @@
     -fx-border-color: #5465ff;
     -fx-text-fill: #03071e;
     -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 1);
+    -fx-border-style: solid;
     -fx-border-radius: 10, 10;
     -fx-border-insets: 1 1 1 1, 0;
 }
@@ -189,4 +189,23 @@
 
 .data4.chart-bar {
     -fx-background-color: linear-gradient( #05668d, #028090, #00a896, #02c39a);
+}
+
+/* Color boton presionado */
+.button1:focused {
+    -fx-background-color: linear-gradient(#80ffdb, #72efdd);
+    -fx-text-fill: #1d1d1d;
+}
+
+.button1 {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #5465ff;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(#80ffdb, #72efdd);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #5c6b73;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }

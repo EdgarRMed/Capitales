@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class ArPa implements Serializable {
-    Node raiz;
+    public Nodo raiz;
     String filename;
 
     public ArPa() {
@@ -12,7 +12,7 @@ public class ArPa implements Serializable {
     }
 
     public void insertar(String pa, String cap) {
-        Node pais = new Node(pa, cap);
+        Nodo pais = new Nodo(pa, cap);
         if (raiz != null) {
             raiz.ant = pais;
             pais.sig = raiz;
@@ -20,24 +20,29 @@ public class ArPa implements Serializable {
         raiz = pais;
     }
 
-    public Node recorrido(int semilla) {
-        Node aux = raiz;
+    public Nodo recorrido(int semilla) {
+        Nodo aux = raiz;
 
-        for (int i = 0; i <= semilla; i++) {
+        for (int i = 0; i < semilla; i++) {
             aux = aux.sig;
         }
         return aux;
     }
 
     public int random(int cont) {
+        System.out.println(cont);
         return new Random().nextInt(cont);
+    }
+
+    public Nodo getRaiz() {
+        return raiz;
     }
 
     @Override
     public String toString() {
         String cad = "";
 
-        Node reco = raiz;
+        Nodo reco = raiz;
         while (reco != null) {
             cad += reco.pais + "->" + reco.capital + "  ";
             reco = reco.sig;

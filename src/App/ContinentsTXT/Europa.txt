@@ -1,23 +1,23 @@
-Albania
+ï»¿Albania
 Tirana
 Alemania
-Berlín
+BerlÃ­n
 Andorra
 Andorra la Vieja
 Armenia
-Ereván
+ErevÃ¡n
 Austria
 Viena
-Azerbaiyán
-Bakú
-Bélgica
+AzerbaiyÃ¡n
+BakÃº
+BÃ©lgica
 Bruselas
 Bielorrusia
 Minsk
 Bosnia y Herzegovina
 Sarajevo
 Bulgaria
-Sofía
+SofÃ­a
 Chipre
 Nicosia
 Croacia
@@ -28,27 +28,27 @@ Eslovaquia
 Bratislava
 Eslovenia
 Liubliana
-España
+EspaÃ±a
 Madrid
 Estonia
 Tallin
 Finlandia
 Helsinki
 Francia
-París
+ParÃ­s
 Georgia
 Tiflis
 Grecia
 Atenas
-Hungría
+HungrÃ­a
 Budapest
 Irlanda
-Dublín
+DublÃ­n
 Islandia
 Reikiavik
 Italia
 Roma
-Kazajistán
+KazajistÃ¡n
 Astana
 Letonia
 Riga
@@ -63,27 +63,27 @@ Skopie
 Malta
 La Valeta
 Moldavia
-Chisináu
-Mónaco
-Ciudad de Mónaco
+ChisinÃ¡u
+MÃ³naco
+Ciudad de MÃ³naco
 Montenegro
 Podgorica
 Noruega
 Oslo
-Países Bajos
-Ámsterdam
+PaÃ­ses Bajos
+Ãmsterdam
 Polonia
 Varsovia
 Portugal
 Lisboa
 Reino Unido
 Londres
-República Checa
+RepÃºblica Checa
 Praga
 Rumania
 Bucarest
 Rusia
-Moscú
+MoscÃº
 San Marino
 Ciudad de San Marino
 Serbia
@@ -92,7 +92,7 @@ Suecia
 Estocolmo
 Suiza
 Berna
-Turquía
+TurquÃ­a
 Ankara
 Ucrania
 Kiev
