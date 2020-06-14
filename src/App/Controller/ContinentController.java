@@ -50,12 +50,14 @@ public class ContinentController implements Initializable {
     ArPa continente;
     Nodo aux;
     int correctas, incorrectas;
+    private boolean dioClickEnNo = false;
 
 
     // Regresa al menú principal
     @FXML
     public void backToMainScene(ActionEvent event) throws IOException {
-        calcularPuntaje();
+        if (!dioClickEnNo)
+            calcularPuntaje();
         setChartValues();
         URL url = new File("src/App/View/mainView.fxml").toURI().toURL();
         Parent mainViewParent = FXMLLoader.load(url);
@@ -94,10 +96,11 @@ public class ContinentController implements Initializable {
             if (aux.sig != null) {
                 aux = aux.sig;
             } else if (continente.segundaOportunidad) {
-                backToMainScene(event);
                 calcularPuntaje();
+                backToMainScene(event);
             } else {
                 calcularPuntaje();
+                dioClickEnNo = true;
                 int respuesta = preguntarSegundaOportunidad();
                 if (respuesta == 0) {
                     continente.eliminarCorrectos();
@@ -140,7 +143,7 @@ public class ContinentController implements Initializable {
     @FXML
     // Cambia los valores de la grafica dependiendo las respuestas del usuario
     public void setChartValues() {
-        int totalCountries;
+        float totalCountries;
         switch (continentNameLabel.getText()) {
             case "América":
                 totalCountries = 35;

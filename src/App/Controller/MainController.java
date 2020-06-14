@@ -21,11 +21,11 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
-    protected static int correctAmerica;
-    protected static int correctEurope;
-    protected static int correctAsia;
-    protected static int correctAfrica;
-    protected static int correctOceania;
+    protected static float correctAmerica;
+    protected static float correctEurope;
+    protected static float correctAsia;
+    protected static float correctAfrica;
+    protected static float correctOceania;
 
     @FXML
     private Button americaBtn;
