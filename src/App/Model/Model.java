@@ -44,7 +44,7 @@ public class Model {
                 boolean yaEsta = false;
 
                 for (int j = 0; j <= i; j++) {
-                    if (x == capitals[j] && paisIndex != x) {
+                    if (x == capitals[j] || paisIndex == x) {
                         yaEsta = true;
                         break;
                     }
