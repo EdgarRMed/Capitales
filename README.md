@@ -9,6 +9,6 @@ Juego que te permite aprender las capitales de los diferenes paises del mundo de
 
 Para comenzar el juego seleccione un contienete y comience a responder las preguntas, tendrá 2 oportunidades. Al terminar su porcentaje será mostrado en una tabla.
 
-![alt text](https://github.com/EdgarRMed/Capitales/blob/master/images/2.PNG)
+![alt text](https://github.com/EdgarRMed/Capitales/blob/master/images/2.png)
 
-![alt text](https://github.com/EdgarRMed/Capitales/blob/master/images/3.PNG)
+![alt text](https://github.com/EdgarRMed/Capitales/blob/master/images/3.png)
